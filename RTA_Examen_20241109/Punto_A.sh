@@ -1,4 +1,4 @@
-ejecutar:
+echo" ejecutar:
 sudo fdisk /dev/sdd
 n
 p
@@ -43,4 +43,4 @@ sudo mkfs.ext4 /dev/mapper/vg_datos-lv_workaeras
 sudo mkswap /dev/mapper/vg_temp-lv_swap
 sudo mount /dev/mapper/vg_datos-lv_docker /var/lib/docker
 sudo mount /dev/mapper/vg_datos-lv_workareas /work
-sudo swapon /dev/mapper/vg_temp-lv_swap
+sudo swapon /dev/mapper/vg_temp-lv_swap"
