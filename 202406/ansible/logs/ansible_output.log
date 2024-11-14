@@ -14,3 +14,88 @@
 }
 2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
 2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-14 16:37:22,754 p=10084 u=gallardo n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost
+was 127.0.0.1
+
+2024-11-14 16:37:23,479 p=10084 u=gallardo n=ansible | PLAY [all] *********************************************************************************
+2024-11-14 16:37:23,521 p=10084 u=gallardo n=ansible | TASK [Gathering Facts] *********************************************************************
+2024-11-14 16:37:24,065 p=10084 u=gallardo n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\ngallardo@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-14 16:37:26,441 p=10084 u=gallardo n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-11-14 16:37:26,444 p=10084 u=gallardo n=ansible | ok: [localhost]
+2024-11-14 16:37:26,463 p=10084 u=gallardo n=ansible | TASK [include_role : 2do_parcial] **********************************************************
+2024-11-14 16:37:26,532 p=10084 u=gallardo n=ansible | included: 2do_parcial for localhost
+2024-11-14 16:37:26,562 p=10084 u=gallardo n=ansible | TASK [2do_parcial : debug] *****************************************************************
+2024-11-14 16:37:26,580 p=10084 u=gallardo n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-14 16:37:26,593 p=10084 u=gallardo n=ansible | TASK [2do_parcial : Crear directorio] ******************************************************
+2024-11-14 16:37:27,232 p=10084 u=gallardo n=ansible | changed: [localhost] => (item=Alumno)
+2024-11-14 16:37:27,621 p=10084 u=gallardo n=ansible | changed: [localhost] => (item=Equipo)
+2024-11-14 16:37:27,636 p=10084 u=gallardo n=ansible | TASK [2do_parcial : Agrego archivo datos_alumno.txt desde template] ************************
+2024-11-14 16:37:28,679 p=10084 u=gallardo n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "checksum": "257b171110125c52fcb3a5c3c4bbedc1311cd512", "msg": "Destination directory /tmp/2do_parcial/alumno does not exist"}
+2024-11-14 16:37:28,681 p=10084 u=gallardo n=ansible | PLAY RECAP *********************************************************************************
+2024-11-14 16:37:28,684 p=10084 u=gallardo n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-14 16:37:28,686 p=10084 u=gallardo n=ansible | localhost                  : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-14 16:41:57,859 p=10299 u=gallardo n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost
+was 127.0.0.1
+
+2024-11-14 16:41:58,137 p=10299 u=gallardo n=ansible | PLAY [all] *********************************************************************************
+2024-11-14 16:41:58,158 p=10299 u=gallardo n=ansible | TASK [Gathering Facts] *********************************************************************
+2024-11-14 16:41:58,606 p=10299 u=gallardo n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\ngallardo@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-14 16:42:00,072 p=10299 u=gallardo n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-11-14 16:42:00,072 p=10299 u=gallardo n=ansible | ok: [localhost]
+2024-11-14 16:42:00,082 p=10299 u=gallardo n=ansible | TASK [include_role : 2do_parcial] **********************************************************
+2024-11-14 16:42:00,129 p=10299 u=gallardo n=ansible | included: 2do_parcial for localhost
+2024-11-14 16:42:00,140 p=10299 u=gallardo n=ansible | TASK [2do_parcial : debug] *****************************************************************
+2024-11-14 16:42:00,160 p=10299 u=gallardo n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-14 16:42:00,173 p=10299 u=gallardo n=ansible | TASK [2do_parcial : Crear directorio] ******************************************************
+2024-11-14 16:42:00,792 p=10299 u=gallardo n=ansible | changed: [localhost] => (item=alumno)
+2024-11-14 16:42:01,211 p=10299 u=gallardo n=ansible | changed: [localhost] => (item=equipo)
+2024-11-14 16:42:01,221 p=10299 u=gallardo n=ansible | TASK [2do_parcial : Agrego archivo datos_alumno.txt desde template] ************************
+2024-11-14 16:42:02,268 p=10299 u=gallardo n=ansible | changed: [localhost]
+2024-11-14 16:42:02,282 p=10299 u=gallardo n=ansible | TASK [2do_parcial : Agrego archivo datos_equipo.txt desde template] ************************
+2024-11-14 16:42:02,381 p=10299 u=gallardo n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ansible.errors.AnsibleUndefinedVariable: 'dict object' has no attribute 'ansible_processor_cores'
+2024-11-14 16:42:02,382 p=10299 u=gallardo n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "AnsibleUndefinedVariable: 'dict object' has no attribute 'ansible_processor_cores'"}
+2024-11-14 16:42:02,385 p=10299 u=gallardo n=ansible | PLAY RECAP *********************************************************************************
+2024-11-14 16:42:02,387 p=10299 u=gallardo n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-14 16:42:02,389 p=10299 u=gallardo n=ansible | localhost                  : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-14 16:56:09,265 p=10565 u=gallardo n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost
+was 127.0.0.1
+
+2024-11-14 16:56:09,548 p=10565 u=gallardo n=ansible | PLAY [all] *********************************************************************************
+2024-11-14 16:56:09,563 p=10565 u=gallardo n=ansible | TASK [Gathering Facts] *********************************************************************
+2024-11-14 16:56:09,731 p=10565 u=gallardo n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\ngallardo@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-14 16:56:11,676 p=10565 u=gallardo n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at
+/usr/bin/python3.10, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-11-14 16:56:11,676 p=10565 u=gallardo n=ansible | ok: [localhost]
+2024-11-14 16:56:11,691 p=10565 u=gallardo n=ansible | TASK [include_role : 2do_parcial] **********************************************************
+2024-11-14 16:56:11,747 p=10565 u=gallardo n=ansible | included: 2do_parcial for localhost
+2024-11-14 16:56:11,756 p=10565 u=gallardo n=ansible | TASK [2do_parcial : debug] *****************************************************************
+2024-11-14 16:56:11,784 p=10565 u=gallardo n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-14 16:56:11,796 p=10565 u=gallardo n=ansible | TASK [2do_parcial : Crear directorio] ******************************************************
+2024-11-14 16:56:12,383 p=10565 u=gallardo n=ansible | changed: [localhost] => (item=alumno)
+2024-11-14 16:56:12,846 p=10565 u=gallardo n=ansible | ok: [localhost] => (item=equipo)
+2024-11-14 16:56:12,855 p=10565 u=gallardo n=ansible | TASK [2do_parcial : Agrego archivo datos_alumno.txt desde template] ************************
+2024-11-14 16:56:13,799 p=10565 u=gallardo n=ansible | ok: [localhost]
+2024-11-14 16:56:13,810 p=10565 u=gallardo n=ansible | TASK [2do_parcial : Agrego archivo datos_equipo.txt desde template] ************************
+2024-11-14 16:56:14,611 p=10565 u=gallardo n=ansible | changed: [localhost]
+2024-11-14 16:56:14,621 p=10565 u=gallardo n=ansible | TASK [2do_parcial : Configurar sudoers para el grupo 2PSupervisores] ***********************
+2024-11-14 16:56:15,080 p=10565 u=gallardo n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2024-11-14 16:56:15,083 p=10565 u=gallardo n=ansible | PLAY RECAP *********************************************************************************
+2024-11-14 16:56:15,088 p=10565 u=gallardo n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-14 16:56:15,088 p=10565 u=gallardo n=ansible | localhost                  : ok=6    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   

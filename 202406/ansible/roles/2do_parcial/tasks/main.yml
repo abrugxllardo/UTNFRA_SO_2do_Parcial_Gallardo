@@ -4,3 +4,32 @@
 - debug:
     msg: "Tareas del 2do Parcial"
 
+- name: "Crear directorio"
+  file:
+    path: "/tmp/2do_parcial/{{ item }}"
+    state: directory
+    mode: '0775'
+    recurse: yes
+  with_items: 
+    - "alumno"
+    - "equipo"
+
+
+- name: "Agrego archivo datos_alumno.txt desde template"
+  template:
+    src: datos_alumno.j2
+    dest: /tmp/2do_parcial/alumno/datos_alumno.txt
+
+- name: "Agrego archivo datos_equipo.txt desde template"
+  template:
+    src: datos_equipo.j2
+    dest: /tmp/2do_parcial/equipo/datos_equipo.txt
+
+- name: "Configurar sudoers para el grupo 2PSupervisores"
+  become: yes
+  lineinfile:
+    path: /etc/sudoers.d/2PSupervisores
+    state: present
+    line: '%2PSupervisores ALL=(ALL) NOPASSWD: ALL'
+    validate: 'visudo -cf %s'
+
